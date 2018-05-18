@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vert.database.DatabaseController">
+   <left>
+      <VBox prefHeight="200.0" prefWidth="125.0" style="-fx-background-color: #303030;" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #404040;" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="600.0" prefWidth="675.0">
+               <top>
+                  <Label text="Database" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Label>
+               </top>
+               <center>
+                  <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ScrollPane hbarPolicy="ALWAYS" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="537.0" prefWidth="555.0" vbarPolicy="ALWAYS" HBox.hgrow="ALWAYS">
+                           <content>
+                              <TableView fx:id="table" prefHeight="760.0" prefWidth="3110.0">
+                                <columns>
+                                  <TableColumn fx:id="id" prefWidth="130.0" text="ID" />
+                                  <TableColumn fx:id="nature" prefWidth="100.0" text="Nature" />
+                                    <TableColumn fx:id="category" prefWidth="100.0" text="Category" />
+                                    <TableColumn fx:id="commonName" prefWidth="150.0" text="Common Name" />
+                                    <TableColumn fx:id="kingdom" prefWidth="100.0" text="Kingdom" />
+                                    <TableColumn fx:id="phylum" prefWidth="100.0" text="Phylum" />
+                                    <TableColumn fx:id="subphylum" prefWidth="100.0" text="Subphylum" />
+                                    <TableColumn fx:id="theClass" prefWidth="100.0" text="Class" />
+                                    <TableColumn fx:id="subclass" prefWidth="150.0" text="Subclass" />
+                                    <TableColumn fx:id="order" prefWidth="175.0" text="Order" />
+                                    <TableColumn fx:id="suborder" prefWidth="175.0" text="Suborder" />
+                                    <TableColumn fx:id="family" prefWidth="200.0" text="Family" />
+                                    <TableColumn fx:id="genus" prefWidth="175.0" text="Genus" />
+                                    <TableColumn fx:id="species" prefWidth="100.0" text="Species" />
+                                    <TableColumn fx:id="geolPeriod" prefWidth="150.0" text="GeolPeriod" />
+                                    <TableColumn fx:id="geolEpoch" prefWidth="130.0" text="GeolEpoch" />
+                                    <TableColumn fx:id="ageRange" prefWidth="100.0" text="Age Range" />
+                                    <TableColumn fx:id="sizeRange" prefWidth="100.0" text="Size Range" />
+                                    <TableColumn fx:id="habitat" prefWidth="275.0" text="Habitat(s)" />
+                                    <TableColumn fx:id="diet" prefWidth="100.0" text="Diet" />
+                                    <TableColumn fx:id="egg" prefWidth="100.0" text="Egg Type" />
+                                    <TableColumn fx:id="citation" prefWidth="300.0" text="Citation" />
+                                </columns>
+                              </TableView>
+                           </content>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                        </ScrollPane>
+                     </children>
+                  </HBox>
+               </center>
+            </BorderPane>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

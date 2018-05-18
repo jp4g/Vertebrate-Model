@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vert.home.SingleHomeController">
+   <left>
+      <VBox prefHeight="200.0" prefWidth="125.0" style="-fx-background-color: #303030;" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="600.0" prefWidth="675.0">
+               <top>
+                  <HBox alignment="CENTER" prefHeight="54.0" prefWidth="675.0" style="-fx-background-color: #404040;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="title" text="VERTEBRATE NAME" textFill="WHITE">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </top>
+               <center>
+                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <BorderPane prefHeight="548.0" prefWidth="675.0">
+                           <bottom>
+                              <VBox prefHeight="206.0" prefWidth="675.0" style="-fx-background-color: #404040;" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Separator prefWidth="200.0" />
+                                    <Label text="Statistics" textFill="WHITE">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="35.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Separator prefWidth="200.0" />
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ScrollPane prefHeight="153.0" prefWidth="675.0" vbarPolicy="NEVER">
+                                             <content>
+                                                <TableView fx:id="statsTable" prefHeight="152.0" prefWidth="3150.0">
+                                                  <columns>
+                                                    <TableColumn fx:id="id" prefWidth="150.0" text="Identifier" />
+                                                      <TableColumn fx:id="nature" prefWidth="150.0" text="Nature" />
+                                                      <TableColumn fx:id="category" prefWidth="150.0" text="Category" />
+                                                      <TableColumn fx:id="commonName" prefWidth="150.0" text="Common Name" />
+                                                      <TableColumn fx:id="kingdom" prefWidth="150.0" text="Kingdom" />
+                                                      <TableColumn fx:id="phylum" prefWidth="150.0" text="Phylum" />
+                                                      <TableColumn fx:id="subphylum" prefWidth="150.0" text="Subphylum" />
+                                                      <TableColumn fx:id="theClass" prefWidth="150.0" text="Class" />
+                                                      <TableColumn fx:id="subclass" prefWidth="150.0" text="Subclass" />
+                                                      <TableColumn fx:id="order" prefWidth="150.0" text="Order" />
+                                                      <TableColumn fx:id="suborder" prefWidth="150.0" text="Suborder" />
+                                                      <TableColumn fx:id="family" prefWidth="150.0" text="Family" />
+                                                      <TableColumn fx:id="genus" prefWidth="150.0" text="Genus" />
+                                                      <TableColumn fx:id="species" prefWidth="150.0" text="Species" />
+                                                      <TableColumn fx:id="geolPeriod" prefWidth="150.0" text="GeolPeriod" />
+                                                      <TableColumn fx:id="geolEpoch" prefWidth="150.0" text="GeolEpoch" />
+                                                      <TableColumn fx:id="ageRange" prefWidth="150.0" text="Age Range" />
+                                                      <TableColumn fx:id="sizeRange" prefWidth="150.0" text="Size Range" />
+                                                      <TableColumn fx:id="habitat" prefWidth="150.0" text="Habitat" />
+                                                      <TableColumn fx:id="diet" prefWidth="150.0" text="Diet" />
+                                                      <TableColumn fx:id="egg" prefWidth="150.0" text="Egg Type" />
+                                                  </columns>
+                                                </TableView>
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <left>
+                              <VBox prefHeight="340.0" prefWidth="334.0" style="-fx-background-color: #404040;" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Separator prefWidth="200.0" />
+                                    <Label text="Description" textFill="#f5f5f5">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="115.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ScrollPane hbarPolicy="NEVER" prefHeight="305.0" prefWidth="334.0" vbarPolicy="ALWAYS">
+                                       <content>
+                                          <TextArea fx:id="descriptionBox" editable="false" prefHeight="299.0" prefWidth="316.0" />
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </VBox>
+                           </left>
+                           <right>
+                              <VBox prefHeight="340.0" prefWidth="341.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <ImageView fx:id="image" fitHeight="339.0" fitWidth="339.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </VBox>
+                           </right>
+                        </BorderPane>
+                     </children></VBox>
+               </center>
+            </BorderPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

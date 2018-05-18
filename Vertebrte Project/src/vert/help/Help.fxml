@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vert.help.HelpController">
+   <top>
+      <HBox alignment="CENTER" prefHeight="45.0" prefWidth="300.0" style="-fx-background-color: #404040;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Program Instructions" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #303030;" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea editable="false" prefHeight="290.0" prefWidth="290.0" text="This program is a visual comparison model for vertebrae living within or close to the Permian period. The following is a summary of how to use the features included, by tab.&#10;&#10;Home: Brings the user back to the last shown vertebrate description page. This can be for either a single species or a species comparison. Pages will show an image of the vertebrate and a scrolling table for statistics on the vertebrate. A description for a single vertebrate will be shown, but not for a comparison.&#10;&#10;Search: To execute a search, click on the search tab. Next, the user can select a category to search by with the &quot;Sort By&quot; dropdown menu. &quot;Sort By&quot; automatically defaults to the species category. Next, the user is presented a dropdown &quot;Category Query&quot; menu under which all possible queries for the given category are listed. The user must have a value defined for both the &quot;Sort By&quot; and &quot;Query&quot; fields in order to execute a search.  Clicking on the &quot;Search&quot; button will show all matching results under the &quot;Results&quot; scrolling field. The user can click on a result to display its description page.&#10;&#10;Compare: To compare two species, the user will select two species by clicking on search for each field. Clicking search creates a new window identical to the search tab, however clicking on a result will select that species to be compared. For the first species, the user can select &quot;Use Current Species&quot;. If the last description page shown was a comparison page, the previous first species will be selected. Otherwise, the species from the last shown single description page will be selected. Once both species have been selected, clicking confirm will compare the two species. &#10;&#10;Database: A simple scrollable table showing all data used in this project, including citations.&#10;&#10;Help: This page, fairly straight forward!&#10;&#10;Credits: Shows the credits for the creation of this program." wrapText="true" VBox.vgrow="NEVER">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="15.0" />
+               </VBox.margin>
+            </TextArea>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: #303030;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="closeBtn" mnemonicParsing="false" onAction="#closeWindow" text="Close">
+               <HBox.margin>
+                  <Insets bottom="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>
